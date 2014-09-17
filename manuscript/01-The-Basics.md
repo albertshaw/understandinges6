@@ -85,15 +85,16 @@ console.log("\u{20BB7}");     // "𠮷"
 Using the extended escape sequence, the correct character is contained in the string.
 
 W> Make sure that you use this new escape sequence only in an ECMAScript 6 environment. In all other environments, doing so causes a syntax error. You may want to check and see if the environment supports the extended escape sequence using a function such as:
+
 ```js
- function supportsExtendedEscape() {
-     try {
-         eval("'\\u{00FF1}'");
-         return true;
-     } catch (ex) {
-         return false;
-     }
- }
+function supportsExtendedEscape() {
+    try {
+        eval("'\\u{00FF1}'");
+        return true;
+    } catch (ex) {
+        return false;
+    }
+}
 ```
 
 ### The normalize() Method
